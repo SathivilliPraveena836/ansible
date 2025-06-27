@@ -1,0 +1,9 @@
+- name: Installing nginx
+  hosts: frontend
+  become: yes
+  connection: ssh
+  tasks:
+    - name: Install nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present
