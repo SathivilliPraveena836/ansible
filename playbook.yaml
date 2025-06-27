@@ -1,5 +1,7 @@
-- name: ping the server
-  hosts: local
-  tasks: # list of servers 
-  -  name: ping the servers
-     ansible.builtin.ping:
+- name: installing nginx
+  hosts: frontend
+  tasks: 
+  -  name: install nginx
+     ansible.builtin.package:
+     - name: nginx
+       state: present  
