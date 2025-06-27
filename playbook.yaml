@@ -1,5 +1,7 @@
 - name: installing nginx
   hosts: frontend
+  become: yes
+  connection: ssh
   tasks: 
   -  name: install nginx
      ansible.builtin.package:
