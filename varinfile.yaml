@@ -1,5 +1,6 @@
 - name: fetch variables from file
   hosts: frontend
+  connection: ssh
   vars_files:
     - course.yaml
 
