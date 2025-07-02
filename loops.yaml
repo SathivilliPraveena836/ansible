@@ -1,0 +1,14 @@
+- name: looping
+  hosts: frontend
+  vars:
+    course: devops
+  tasks:
+    - name: book finding
+      ansible.builtin.debug:
+        msg: "item found {{item}}"
+      loop:
+      - aws
+      - terraform
+      - devops
+      when: course == item
+      
