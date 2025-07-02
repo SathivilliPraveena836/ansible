@@ -3,7 +3,7 @@
   vars_prompt:
     - name: username
       prompt: "enter the username: "
-      private: true #shows the username on screen
+      private: true 
     - name: password
       prompt: "enter the password : "
-      private: false
+      private: false #shows the password on screen
