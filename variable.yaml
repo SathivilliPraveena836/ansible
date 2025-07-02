@@ -1,9 +1,9 @@
 - name: variables
   hosts: frontend
   vars:
-    course = devops
-    educator = shiva
-    duration = 1hr 30 min
+    course : devops
+    educator : shiva
+    duration : 1hr 30 min
   tasks:
     - name: print message
       ansible.builtin.debug:
