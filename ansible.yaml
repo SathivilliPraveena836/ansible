@@ -1,0 +1,14 @@
+- name: mongodb database
+  become: yes
+  hosts: mongodb
+  tasks:
+  - name: copy mongodb repo
+    ansible.builtin.copy:
+      src: mongo.repo
+      dest: vim /etc/yum.repos.d/mongo.repo
+
+  - name: install mongodb
+    ansible.builtin.dnf:
+      name: mongodb-org
+      state: present
+      
