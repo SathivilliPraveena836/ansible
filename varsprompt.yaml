@@ -1,0 +1,9 @@
+- name: variable in prompt
+  hosts: frontend
+  vars_prompt:
+    - name: username
+      prompt: "enter the username: "
+      private: true 
+    - name: password
+      prompt: "enter the password : "
+      private: false #shows the password on screen

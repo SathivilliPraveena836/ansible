@@ -1,0 +1,10 @@
+- name: variables
+  hosts: frontend
+  vars:
+    course : devops
+    educator : shiva
+    duration : 1hr 30 min
+  tasks:
+    - name: print message
+      ansible.builtin.debug:
+        msg: "I'm learning {{course}} with {{educator}} and it has {{duration}} for 4 months"

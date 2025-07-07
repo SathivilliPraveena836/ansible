@@ -1,0 +1,14 @@
+- name: conditions
+  hosts: frontend
+  vars:
+    course: devops
+  tasks:
+    - name: if course devops read it
+      ansible.builtin.debug:
+        msg: "read this course"
+      when: course == "devops"
+
+    - name: if course is not devops
+      ansible.builtin.debug:
+        msg: "never read this"
+      when: course != "devops"

@@ -1,0 +1,10 @@
+- name: fetch variables from file
+  hosts: frontend
+  connection: ssh
+  vars_files:
+    - course.yaml
+
+  tasks:
+    - name: Show course info
+      ansible.builtin.debug:
+        msg: "I'm learning {{ course }} with {{ educator }} and it has {{ duration }} for 4 months"
